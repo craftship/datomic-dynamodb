@@ -1,0 +1,12 @@
+datomic:
+  build: datomic
+  links:
+    - dynamodb
+  environment:
+    AWS_ACCESS_KEY_ID: DEV
+    AWS_SECRET_KEY: DEV
+
+dynamodb:
+  image: craftship/dynamodb
+  volumes:
+    - db:/opt/dynamodb/db
